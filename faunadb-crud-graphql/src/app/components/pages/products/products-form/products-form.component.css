@@ -1,0 +1,19 @@
+div.form__wrapper {
+    text-align: center;
+}
+
+div.form__wrapper form {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 20px;
+    padding-bottom: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+button.right {
+    float: right;
+    right: 20px;
+    clear: both;
+}

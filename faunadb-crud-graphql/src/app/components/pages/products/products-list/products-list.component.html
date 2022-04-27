@@ -1,0 +1,21 @@
+
+<!-- {{ products$ | async | json }} -->
+
+<div class="products__container">
+    
+    <ng-container *ngFor="let product of products$ | async">
+        <section class="product__item">
+            <a [routerLink]="['/products-form/' + product._id+'/'+product.product.typeProduct]">
+                <div class="product__content">
+                    <strong class="product__title">{{ product.product.name }}</strong>
+                </div>
+            </a>
+            <button mat-icon-button color="warn" aria-label="Delete" class="right" (click)="delete(product._id, product.product._id, product.product.typeProduct)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </section>
+    </ng-container>
+    <button [routerLink]="['/products-form/new/Car']" mat-fab color="primary" aria-label="New" class="right-fixed">
+        <mat-icon>plus_one</mat-icon>
+    </button>
+</div>

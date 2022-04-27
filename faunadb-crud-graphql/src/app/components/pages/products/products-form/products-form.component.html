@@ -1,0 +1,6 @@
+<div class="form__wrapper">
+    <form [formGroup]="form" (ngSubmit)="onSubmit(model)">
+        <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+        <button mat-stroked-button  color="primary" type="submit" class="right">Guardar</button>
+    </form>
+</div>
